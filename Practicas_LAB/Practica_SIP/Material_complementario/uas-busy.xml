@@ -46,13 +46,20 @@
       <!-- Specify the status line of the SIP response RINGING>
       <!-- Specify here the SIP header fieldsVia, From, To, Call-ID, and CSeq. -->
       <!-- To that purpose, you may use the SIPp command [last_*] de SIPp. -->
-      Contact: 
+      SIP/2.0 180 Ringing
+      [last_Via:]
+      [last_From:]
+      [last_To:];tag=[call_number]
+      [last_Call-ID:]
+      [last_Cseq:]
+      Contact: <sip:100429481@[local_ip]:[local_port]>
       Content-Length: 0
 
     ]]>
   </send>
 
   <!-- Include a pause of 5 seconds -->
+  <pause milliseconds="5000"/>
 
   <send retrans="500">
     <![CDATA[
@@ -60,7 +67,13 @@
       <!-- Specify the status line of the SIP response Busy-Here>
       <!-- Specify here the SIP header fieldsVia, From, To, Call-ID, and CSeq. -->
       <!-- To that purpose, you may use the SIPp command [last_*] de SIPp. -->
-      Contact:
+      SIP/2.0 486 Busy Here
+      [last_Via:]
+      [last_From:]
+      [last_To:];tag=[call_number]
+      [last_Call-ID:]
+      [last_Cseq:]
+      Contact: <sip:100429481@[local_ip]:[local_port]>
       Content-Length: 0
 
     ]]>
@@ -79,4 +92,3 @@
   <CallLengthRepartition value="10, 50, 100, 500, 1000, 5000, 10000"/>
 
 </scenario>
-
