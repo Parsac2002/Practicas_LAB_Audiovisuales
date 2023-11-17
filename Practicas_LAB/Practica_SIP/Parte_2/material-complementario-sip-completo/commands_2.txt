@@ -1,0 +1,5 @@
+VoIP1: 
+/opt/sipp-3.6.0/sipp 10.0.1:10:5060 -sf /home/labit/Audiovisuales/Practicas_LAB_Audiovisuales/Practicas_LAB/Practica_SIP/Parte_2/Material_complementario/registration-voip2.xml -i 10.0.0.10 -p 15000 -m 1
+
+VoIP2:
+/opt/sipp-3.6.0/sipp 10.0.1:10:5060 -sf /home/labit/Audiovisuales/Practicas_LAB_Audiovisuales/Practicas_LAB/Practica_SIP/Parte_2/Material_complementario/registration-voip2.xml -i 10.0.0.11 -p 20000 -m 1
