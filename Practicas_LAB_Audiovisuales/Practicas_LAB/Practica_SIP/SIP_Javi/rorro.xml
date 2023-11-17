@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scenario name="/tmp/tmptizfg1pd">
+  <networks>
+    <network id="1" name="n1" icon="" canvas="1" type="SWITCH">
+      <position x="136.0" y="351.0" lat="47.57597584460451" lon="-122.13049165557038" alt="2.0"/>
+    </network>
+    <network id="2" name="n2" icon="" canvas="1" type="SWITCH">
+      <position x="554.0" y="389.0" lat="47.57563041534988" lon="-122.12485921873895" alt="2.0"/>
+    </network>
+  </networks>
+  <devices>
+    <device id="3" name="router" icon="" canvas="1" type="router" class="" image="">
+      <position x="306.0" y="557.0" lat="47.574103227127516" lon="-122.12820095159587" alt="2.0"/>
+      <configservices>
+        <service name="OSPFv3"/>
+        <service name="zebra"/>
+        <service name="OSPFv2"/>
+        <service name="IPForward"/>
+      </configservices>
+    </device>
+    <device id="4" name="VoIPserver" icon="" canvas="1" type="PC" class="" image="">
+      <position x="124.0" y="163.0" lat="47.57768477686583" lon="-122.13065335232152" alt="2.0"/>
+      <configservices>
+        <service name="DefaultRoute"/>
+      </configservices>
+    </device>
+    <device id="5" name="VoIP2" icon="" canvas="1" type="PC" class="" image="">
+      <position x="794.0" y="545.0" lat="47.57421231347763" lon="-122.12162528371611" alt="2.0"/>
+      <configservices>
+        <service name="DefaultRoute"/>
+      </configservices>
+    </device>
+    <device id="6" name="n3" icon="" canvas="1" type="PC" class="" image="">
+      <position x="590.0" y="193.0" lat="47.57741207864928" lon="-122.12437412848553" alt="2.0"/>
+      <configservices>
+        <service name="DefaultRoute"/>
+      </configservices>
+    </device>
+    <device id="7" name="VoIP" icon="" canvas="1" type="PC" class="" image="">
+      <position x="888.0" y="95.0" lat="47.578302887565215" lon="-122.1203586591655" alt="2.0"/>
+      <configservices>
+        <service name="DefaultRoute"/>
+      </configservices>
+    </device>
+  </devices>
+  <links>
+    <link node1="3" node2="1">
+      <iface1 id="1" name="eth1" ip4="10.0.1.1" ip4_mask="24"/>
+      <iface2 id="0" name="veth1.0.1"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="2" node2="7">
+      <iface1 id="2" name="veth2.2.1"/>
+      <iface2 id="0" name="eth0" ip4="10.0.0.10" ip4_mask="24"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="3" node2="2">
+      <iface1 id="0" name="eth0" ip4="10.0.0.1" ip4_mask="24"/>
+      <iface2 id="0" name="veth2.0.1"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="2" node2="5">
+      <iface1 id="1" name="veth2.1.1"/>
+      <iface2 id="0" name="eth0" ip4="10.0.0.11" ip4_mask="24"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="2" node2="6">
+      <iface1 id="3" name="veth2.3.1"/>
+      <iface2 id="0" name="eth0" ip4="10.0.0.22" ip4_mask="24"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="1" node2="4">
+      <iface1 id="1" name="veth1.1.1"/>
+      <iface2 id="0" name="eth0" ip4="10.0.1.20" ip4_mask="24"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+  </links>
+  <configservice_configurations>
+    <service name="OSPFv3" node="3"/>
+    <service name="zebra" node="3"/>
+    <service name="OSPFv2" node="3"/>
+    <service name="IPForward" node="3"/>
+    <service name="DefaultRoute" node="4"/>
+    <service name="DefaultRoute" node="5"/>
+    <service name="DefaultRoute" node="6"/>
+    <service name="DefaultRoute" node="7"/>
+  </configservice_configurations>
+  <session_origin lat="47.579166412353516" lon="-122.13232421875" alt="2.0" scale="150.0"/>
+  <session_options>
+    <configuration name="controlnet" value=""/>
+    <configuration name="controlnet0" value=""/>
+    <configuration name="controlnet1" value=""/>
+    <configuration name="controlnet2" value=""/>
+    <configuration name="controlnet3" value=""/>
+    <configuration name="controlnet_updown_script" value=""/>
+    <configuration name="enablerj45" value="1"/>
+    <configuration name="preservedir" value="0"/>
+    <configuration name="enablesdt" value="0"/>
+    <configuration name="sdturl" value="tcp://127.0.0.1:50000/"/>
+    <configuration name="ovs" value="0"/>
+    <configuration name="platform_id_start" value="1"/>
+    <configuration name="nem_id_start" value="1"/>
+    <configuration name="link_enabled" value="1"/>
+    <configuration name="loss_threshold" value="30"/>
+    <configuration name="link_interval" value="1"/>
+    <configuration name="link_timeout" value="4"/>
+    <configuration name="mtu" value="0"/>
+  </session_options>
+  <session_metadata>
+    <configuration name="shapes" value="[]"/>
+    <configuration name="edges" value="[]"/>
+    <configuration name="hidden" value="[]"/>
+    <configuration name="canvas" value="{&quot;gridlines&quot;: true, &quot;canvases&quot;: [{&quot;id&quot;: 1, &quot;wallpaper&quot;: null, &quot;wallpaper_style&quot;: 1, &quot;fit_image&quot;: false, &quot;dimensions&quot;: [1000, 750]}]}"/>
+  </session_metadata>
+  <default_services>
+    <node type="mdr">
+      <service name="zebra"/>
+      <service name="OSPFv3MDR"/>
+      <service name="IPForward"/>
+    </node>
+    <node type="PC">
+      <service name="DefaultRoute"/>
+    </node>
+    <node type="prouter"/>
+    <node type="router">
+      <service name="zebra"/>
+      <service name="OSPFv2"/>
+      <service name="OSPFv3"/>
+      <service name="IPForward"/>
+    </node>
+    <node type="host">
+      <service name="DefaultRoute"/>
+      <service name="SSH"/>
+    </node>
+  </default_services>
+</scenario>
