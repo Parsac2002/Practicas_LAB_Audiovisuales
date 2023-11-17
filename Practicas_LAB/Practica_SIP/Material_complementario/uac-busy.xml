@@ -34,11 +34,11 @@
 
       INVITE sip:[service]@[remote_ip]:[remote_port] SIP/2.0
       Via: SIP/2.0/UDP [local_ip]:[local_port] 
-      From: [user_UAC] <sip:[user_UAC]@[local_ip]:[local_port]>
+      From: 100451824<sip:1100451824local_ip]:[local_port]>
       To: [service]  <sip:[service]@[remote_ip]:[remote_port]>
       Call-ID: [call_id]
       CSeq: [cseq] INVITE 
-      Contact: sip:[user_UAC]@[local_ip]:[local_port]
+      Contact: sip:100451824[local_ip]:[local_port]
       Max-Forwards: 70
       Subject: UAC with busy UAS
       Content-Type: application/sdp
@@ -76,11 +76,11 @@
 
       ACK [next_url] SIP/2.0
       Via: SIP/2.0/UDP [local_ip]:[local_port]
-      From: [user_UAC] <sip:[user_UAC]@[local_ip]:[local_port]>
+      From: 100451824<sip:1100451824local_ip]:[local_port]>
       To: [service]  <sip:[service]@[remote_ip]:[remote_port]>
       Call-ID: [call_id]
       CSeq: [cseq] ACK
-      Contact: sip:[user_UAC]@[local_ip]:[local_port]
+      Contact: sip:100451824[local_ip]:[local_port]
       Max-Forwards: 70
       Subject: UAC with busy UAS
       Content-Length: 0
