@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE scenario SYSTEM "sipp.dtd">
 
-<!-- This program is free software; you can redistribute it and/or      -->
-<!-- modify it under the terms of the GNU General Public License as     -->
-<!-- published by the Free Software Foundation; either version 2 of the -->
-<!-- License, or (at your option) any later version.                    -->
-<!--                                                                    -->
-<!-- This program is distributed in the hope that it will be useful,    -->
-<!-- but WITHOUT ANY WARRANTY; without even the implied warranty of     -->
-<!-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the      -->
-<!-- GNU General Public License for more details.                       -->
-<!--                                                                    -->
-<!-- You should have received a copy of the GNU General Public License  -->
-<!-- along with this program; if not, write to the                      -->
-<!-- Free Software Foundation, Inc.,                                    -->
-<!-- 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA             -->
-<!--                                                                    -->
 <!--                 Sipp default 'uas' scenario.                       -->
-<!--                                                                    -->
 
 <scenario name="Scenario with UAS busy">
   <!-- By adding rrs="true" (Record Route Sets), the route sets         -->
@@ -43,37 +27,30 @@
   <send>
     <![CDATA[
 
-      <!-- Specify the status line of the SIP response RINGING>
-      <!-- Specify here the SIP header fieldsVia, From, To, Call-ID, and CSeq. -->
-      <!-- To that purpose, you may use the SIPp command [last_*] de SIPp. -->
       SIP/2.0 180 Ringing
       [last_Via:]
       [last_From:]
       [last_To:];tag=[call_number]
       [last_Call-ID:]
       [last_CSeq:]
-      Contact: <sip:100429481@[local_ip]:[local_port]>
+      Contact: <sip:s_100451802@[local_ip]:[local_port];transport=[transport]>
       Content-Length: 0
 
     ]]>
   </send>
 
   <!-- Include a pause of 5 seconds -->
-  <pause milliseconds="5000"/>
 
   <send retrans="500">
     <![CDATA[
 
-      <!-- Specify the status line of the SIP response Busy-Here>
-      <!-- Specify here the SIP header fieldsVia, From, To, Call-ID, and CSeq. -->
-      <!-- To that purpose, you may use the SIPp command [last_*] de SIPp. -->
       SIP/2.0 486 Busy Here
       [last_Via:]
       [last_From:]
       [last_To:];tag=[call_number]
       [last_Call-ID:]
       [last_CSeq:]
-      Contact: <sip:100429481@[local_ip]:[local_port]>
+      Contact: <sip:s_100451802@[local_ip]:[local_port];transport=[transport]>
       Content-Length: 0
 
     ]]>
