@@ -27,7 +27,7 @@
   <!-- can be useful if you want to reject reINVITEs and keep the       -->
   <!-- media stream flowing.                                            -->
 
-  <Global variables="username"/>
+  
 
   <recv request="INVITE" crlf="true" rrs="true">
   </recv>
