@@ -1,9 +1,0 @@
-VoIP2:
-/opt/sipp-3.6.0/sipp -sf /home/labit/Audiovisuales/Practicas_LAB_Audiovisuales/Practicas_LAB/Practica_SIP/Material_complementario/uas-busy.xml -i 10.0.0.11 -p 20000 -s 100429481
-
-VoIP1:
-/opt/sipp-3.6.0/sipp 10.0.0.11:20000 -sf /home/labit/Audiovisuales/Practicas_LAB_Audiovisuales/Practicas_LAB/Practica_SIP/Material_complementario/uac-busy.xml -i 10.0.0.10 -p 15000 -s 100429481 -m 1
-
-Para abrir wireshark:
-export DISPLAY=:0
-sudo -u labit wireshark &
