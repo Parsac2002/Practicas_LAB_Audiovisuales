@@ -60,10 +60,15 @@
   </send>
 
   <!-- Include a pause of 5 seconds -->
-
+  <pause milliseconds="5000"/>
   <send retrans="500">
     <![CDATA[
-
+      SIP/2.0 200 OK
+      [last_Via:]
+      [last_From:]
+      [last_To:];tag=[call_number]
+      [last_Call-ID:]
+      [last_CSeq:]
       [last_Record-Route]
       Contact: <sip:100429481@[local_ip]:[local_port]>
       Content-Type: application/sdp
