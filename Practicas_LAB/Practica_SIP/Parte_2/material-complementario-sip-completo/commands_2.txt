@@ -12,3 +12,6 @@ VoIP1:UAC
 VoIP2: UAS
 /opt/sipp-3.6.0/sipp -sf /home/labit/Audiovisuales/Practicas_LAB_Audiovisuales/Practicas_LAB/Practica_SIP/Parte_2/material-complementario-sip-completo/uas-proxycall.xml -i 10.0.0.11 -p 20000
 
+Wireshark on the machine:
+export DISPLAY=:0
+sudo -u labit wireshark & 
