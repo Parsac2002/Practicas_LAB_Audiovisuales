@@ -46,12 +46,15 @@
   <send>
     <![CDATA[
 
-      <!-- Specify the status line of the SIP RINGING response>
-      <!-- Specify here the SIP header fields: Via, From, To, Call-ID, and CSeq. -->
-      <!-- To that purpose, you may use the SIPp command [last_*] de SIPp. -->
-      [last_Record-Route]
-      Contact: 
+      SIP/2.0 180 Ringing
+      [last_Via:]
+      [last_From:]
+      [last_To:];tag=[call_number]
+      [last_Call-ID:]
+      [last_CSeq:]
+      Contact: <sip:100429481@[local_ip]:[local_port]>
       Content-Length: 0
+
 
     ]]>
   </send>
@@ -61,11 +64,8 @@
   <send retrans="500">
     <![CDATA[
 
-      <!-- Specify the status line of the SIP OK response>
-      <!-- Specify here the SIP header fields: Via, From, To, Call-ID, and CSeq. -->
-      <!-- To that purpose, you may use the SIPp command [last_*] de SIPp. -->
       [last_Record-Route]
-      Contact: 
+      Contact: <sip:100429481@[local_ip]:[local_port]>
       Content-Type: application/sdp
       Content-Length: [len]
 
@@ -91,10 +91,13 @@
 
   <send>
     <![CDATA[
-
-      <!-- Specify the status line of the SIP OK response>
-      <!-- Specify here the SIP header fields: Via, From, To, Call-ID, and CSeq. -->
-      <!-- To that purpose, you may use the SIPp command [last_*] de SIPp. -->
+      SIP/2.0 200 OK
+      [last_Via:]
+      [last_From:]
+      [last_To:]
+      [last_Call-ID:]
+      [last_CSeq:]
+      Contact:  <sip:100429481@[local_ip]:[local_port]>
       Content-Length: 0
 
     ]]>
@@ -112,4 +115,3 @@
   <CallLengthRepartition value="10, 50, 100, 500, 1000, 5000, 10000"/>
 
 </scenario>
-

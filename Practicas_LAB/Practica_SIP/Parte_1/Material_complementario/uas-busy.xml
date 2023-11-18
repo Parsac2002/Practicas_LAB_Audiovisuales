@@ -43,9 +43,6 @@
   <send>
     <![CDATA[
 
-      <!-- Specify the status line of the SIP response RINGING>
-      <!-- Specify here the SIP header fieldsVia, From, To, Call-ID, and CSeq. -->
-      <!-- To that purpose, you may use the SIPp command [last_*] de SIPp. -->
       SIP/2.0 180 Ringing
       [last_Via:]
       [last_From:]
@@ -64,9 +61,6 @@
   <send retrans="500">
     <![CDATA[
 
-      <!-- Specify the status line of the SIP response Busy-Here>
-      <!-- Specify here the SIP header fieldsVia, From, To, Call-ID, and CSeq. -->
-      <!-- To that purpose, you may use the SIPp command [last_*] de SIPp. -->
       SIP/2.0 486 Busy Here
       [last_Via:]
       [last_From:]
