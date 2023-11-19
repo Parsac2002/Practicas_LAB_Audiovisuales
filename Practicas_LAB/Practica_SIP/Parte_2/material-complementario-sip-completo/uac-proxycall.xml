@@ -34,7 +34,7 @@
       To: [service]  <sip:[service]@voip-empresa.net>
       Call-ID: [call_id]
       CSeq: [cseq] INVITE
-      Route: <sip:[remote_ip]:[remote_port];lr>
+      Route: <sip:voip-empresa.net:5060;lr>
       Contact: <sip:100451824@[local_ip]:[local_port]>
       Max-Forwards: 70
       Subject: Call with Proxy
