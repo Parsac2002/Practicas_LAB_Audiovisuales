@@ -29,7 +29,7 @@
     <![CDATA[
 
       INVITE sip:[service]@voip-empresa.net SIP/2.0
-      Via: SIP/2.0/UDP [local_ip]:[local_port]
+      Via: SIP/2.0/UDP voip-empresa.net:5060
       From: 100451824 <sip:100451824@voip-empresa.net>
       To: [service]  <sip:[service]@voip-empresa.net>
       Call-ID: [call_id]
@@ -75,7 +75,7 @@
     <![CDATA[
 
       ACK sip:[next_url] SIP/2.0
-      Via: SIP/2.0/UDP [local_ip]:[local_port]
+      Via: SIP/2.0/UDP voip-empresa.net:5060
       From: 100451824 <sip:100451824@voip-empresa.net>
       To: [service] <sip:[service]@voip-empresa.net>
       Call-ID: [call_id]
@@ -96,7 +96,7 @@
     <![CDATA[
 
       BYE sip:[next_url] SIP/2.0
-      Via: SIP/2.0/UDP [local_ip]:[local_port]
+      Via: SIP/2.0/UDP voip-empresa.net:5060
       From: 100451824 <sip:100451824@voip-empresa.net>
       To: [service] <sip:[service]@voip-empresa.net> 
       Call-ID: [call_id]
