@@ -29,12 +29,12 @@
     <![CDATA[
 
       INVITE sip:[service]@voip-empresa.net SIP/2.0
-      Via: SIP/2.0/UDP voip-empresa.net:5060
+      Via: SIP/2.0/UDP 10.0.1.10:5060
       From: 100451824 <sip:100451824@voip-empresa.net>
       To: [service]  <sip:[service]@voip-empresa.net>
       Call-ID: [call_id]
       CSeq: [cseq] INVITE
-      Route: <sip:voip-empresa.net:5060;lr>
+      Route: <sip:10.0.1.10:5060;lr>
       Contact: <sip:100451824@[local_ip]:[local_port]>
       Max-Forwards: 70
       Subject: Call with Proxy
