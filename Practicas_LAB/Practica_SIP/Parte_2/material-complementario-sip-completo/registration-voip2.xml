@@ -31,7 +31,7 @@
       From: 100429481 <sip:100429481@voip-empresa.net>
       To: 100429481 <sip:100429481@voip-empresa.net>
       Call-ID: [call_id]
-      CSeq: [CSeq] REGISTER
+      CSeq: [cseq] REGISTER
       Contact: <sip:100429481@[local_ip]:[local_port]>
       Max-Forwards: 70
       Expires: 3600
