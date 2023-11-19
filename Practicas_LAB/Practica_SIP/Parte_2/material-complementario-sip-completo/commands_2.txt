@@ -7,10 +7,10 @@ VoIP2:
 
 Parte 2: Proxy
 VoIP1:UAC
-/opt/sipp-3.6.0/sipp 10.0.0.11:20000 -sf /home/labit/Audiovisuales/Practicas_LAB_Audiovisuales/Practicas_LAB/Practica_SIP/Parte_2/material-complementario-sip-completo/uac-proxycall.xml -i 10.0.0.10 -p 15000 -s 100429481 -m 1
+/opt/sipp-3.6.0/sipp 10.0.0.11:20000 -sf /home/labit/Audiovisuales/Practicas_LAB_Audiovisuales/Practicas_LAB/Practica_SIP/Parte_2/material-complementario-sip-completo/uac-proxycall.xml -i 10.0.0.10 -p 15000 -s 100429481 -m 1 -rsa 10.0.1.10:5060
 
 VoIP2: UAS
-/opt/sipp-3.6.0/sipp -sf /home/labit/Audiovisuales/Practicas_LAB_Audiovisuales/Practicas_LAB/Practica_SIP/Parte_2/material-complementario-sip-completo/uas-proxycall.xml -i 10.0.0.11 -p 20000
+/opt/sipp-3.6.0/sipp -sf /home/labit/Audiovisuales/Practicas_LAB_Audiovisuales/Practicas_LAB/Practica_SIP/Parte_2/material-complementario-sip-completo/uas-proxycall.xml -i 10.0.0.11 -p 20000 -rsa 10.0.1.10:5060
 
 Wireshark on the machine:
 export DISPLAY=:0
